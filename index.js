@@ -29,8 +29,10 @@ console.log(numberArray([3,4,6,2]));
 
 //Write a JavaScript function that takes an array of mixed data types and returns a new array containing only the string elements, all converted to uppercase.
 function getNumbers(newArray){
-    let stringType=newArray.filter(item=>typeof item ==="String".map(str.toUpperCase()));
-    return stringType;
+   return newArray
+        .filter(item=> typeof item ==="string")
+        .map(str => str.toUpperCase());
+    
 
 }
-console.log(getNumbers("car",20,null));
+console.log(getNumbers(["car",20,null]));
